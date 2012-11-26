@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>fastwpa</name>
+	<name>ascii</name>
 	<comment></comment>
 	<projects>
 		<project>com_android_vending_licensing</project>
