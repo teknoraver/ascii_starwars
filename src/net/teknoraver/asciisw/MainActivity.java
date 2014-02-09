@@ -8,6 +8,9 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -58,6 +61,9 @@ public class MainActivity extends Activity implements Runnable, OnClickListener 
 
 		playpause = (ImageButton)findViewById(R.id.play);
 		playpause.setOnClickListener(this);
+
+		AdView adView = (AdView)findViewById(R.id.adView);
+		adView.loadAd(new AdRequest.Builder().build());
 
 		init();
 	}
