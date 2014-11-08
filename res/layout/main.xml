@@ -8,7 +8,7 @@
 	<com.google.android.gms.ads.AdView
 	    xmlns:ads="http://schemas.android.com/apk/res-auto"
 		android:id="@+id/adView"
-		android:layout_width="fill_parent" 
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		ads:adUnitId="a15015af2cd5143"
 		ads:adSize="SMART_BANNER"

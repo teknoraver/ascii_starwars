@@ -28,7 +28,7 @@ import android.widget.ImageButton;
 public class MainActivity extends Activity implements Runnable, OnClickListener {
 	static final int FPS = 15;
 
-	private AssetManager am;		
+	private AssetManager am;
 	private XmlPullParser in;
 	private Handler handler;
 	private Screen screen;
@@ -95,7 +95,7 @@ public class MainActivity extends Activity implements Runnable, OnClickListener 
 		}
 
 		in.require(XmlPullParser.START_TAG, null, "frame");
-			
+
 		int delay = Integer.parseInt(in.getAttributeValue(null, "duration"));
 
 		String chaps = in.getAttributeValue(null, "chapter");
@@ -133,7 +133,7 @@ public class MainActivity extends Activity implements Runnable, OnClickListener 
 		in.require(XmlPullParser.END_TAG, null, null);
 
 		// every frame has a leading ".\n" to avoid the XML parser to trim the leading space
-		String rows[] = framestring.substring(2).split("\n");		
+		String rows[] = framestring.substring(2).split("\n");
 
 		frame = new Frame(delay, rows);
 		if(chaps != null)
@@ -161,10 +161,10 @@ public class MainActivity extends Activity implements Runnable, OnClickListener 
 		try {
 			in = XmlPullParserFactory.newInstance().newPullParser();
 			in.setInput(new GZIPInputStream(am.open("sw.xml.jpg")), null);
-	
+
 			// Start
 			in.require(XmlPullParser.START_DOCUMENT, null, null);
-	
+
 			in.nextTag();
 			in.require(XmlPullParser.START_TAG, null, "frameset");
 			chapters = Integer.parseInt(in.getAttributeValue(null, "chapters"));
